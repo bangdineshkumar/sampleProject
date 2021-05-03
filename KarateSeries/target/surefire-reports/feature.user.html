@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+      
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+        <meta charset="utf-8">
+            
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+            
+        <link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+            
+        <link href="res/karate-report.css" rel="stylesheet" type="text/css">
+            
+        <link href="favicon.ico" rel="shortcut icon">
+            <script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+        <title>feature.user</title>
+          
+    </head>
+      
+    <body>
+            
+        <div id="root-container">
+                  
+            <div id="leftnav">
+                        
+                <div class="nav-logo">
+                              <a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+                    <div class="nav-count">
+                                    
+                        <div class="bg-success" id="nav-pass">1</div>
+                                    
+                        <div class="bg-danger" id="nav-fail">0</div>
+                                  
+                    </div>
+                            
+                </div>
+                        
+                <div id="nav-type">Scenarios</div>
+                         
+        
+                <div id="nav-date">2021-04-21 06:06:17 pm</div>
+                        
+      
+                <div class="nav-container">
+                    <div class="nav-item passed">
+                        <a href="#[1:7]">[1:7] List all the user having name with john </a>
+                    </div>
+                </div>
+            </div>
+                  
+            <div id="content">
+                      
+                <div class="page-heading alert alert-primary">
+                    <a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">feature/user.feature</span><span class="feature-description">check return user by the API</span>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[1:7]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [1:7]</span><span class="scenario-name">List all the user having name with john </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 456</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="[1:7]bg">
+                            <div class="step-ref bg-step">&gt;&gt;</div>
+                            <div class="step-cell passed">Background:</div>
+                        </div>
+                        <div class="time-cell passed"></div>
+                    </div>
+                    <div class="step-row" data-parent="[1:7]bg">
+                        <div class="step-container" id="1">
+                            <div class="step-ref bg-step">1</div>
+                            <div class="step-cell passed">* url 'https://gorest.co.in'</div>
+                        </div>
+                        <div class="time-cell passed">8</div>
+                    </div>
+                    <div class="preformatted" data-parent="1">18:06:17.060 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+                    <div class="step-row" data-parent="[1:7]bg">
+                        <div class="step-container" id="2">
+                            <div class="step-ref bg-step">2</div>
+                            <div class="step-cell passed">* header Authorization = 'c7b59796ad1ddc1cab315d10217112771d42b38a2c7c53ba0fc24c09d34654a6'</div>
+                        </div>
+                        <div class="time-cell passed">5</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="3">
+                            <div class="step-ref passed">3</div>
+                            <div class="step-cell passed">Given path '/public-api/users'</div>
+                        </div>
+                        <div class="time-cell passed">10</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="4">
+                            <div class="step-ref passed">4</div>
+                            <div class="step-cell passed">And param first_name = 'john'</div>
+                        </div>
+                        <div class="time-cell passed">7</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="5">
+                            <div class="step-ref passed">5</div>
+                            <div class="step-cell passed">When method get</div>
+                        </div>
+                        <div class="time-cell passed">426</div>
+                    </div>
+                    <div class="preformatted" data-parent="5">18:06:17.096 request:
+1 &gt; GET https://gorest.co.in/public-api/users?first_name=john
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: c7b59796ad1ddc1cab315d10217112771d42b38a2c7c53ba0fc24c09d34654a6
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: gorest.co.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/14.0.2)
+
+18:06:17.512 response time in milliseconds: 414.29
+1 &lt; 200
+1 &lt; Cache-Control: max-age=0, private, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Wed, 21 Apr 2021 12:36:15 GMT
+1 &lt; ETag: W/"8d729b6a16a3d2ffbe0c0b5167fac469"
+1 &lt; Expect-CT: enforce; max-age=3600
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Server: nginx
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: [Accept-Encoding, Origin]
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Frame-Options: [SAMEORIGIN, sameorigin]
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; X-Request-Id: 0edae66a-f91c-4237-a294-8d0ac96267b1
+1 &lt; X-Runtime: 0.004242
+1 &lt; X-XSS-Protection: 1; mode=block
+{"code":200,"meta":{"pagination":{"total":1494,"pages":75,"page":1,"limit":20}},"data":[{"id":12,"name":"wddDaevi Pandey ","email":"daevi_pandey@denesik.org","gender":"Male","status":"Active","created_at":"2021-04-21T03:50:04.421+05:30","updated_at":"2021-04-21T16:09:24.566+05:30"},{"id":14,"name":"Mr. Bhoopat Bhattacharya","email":"bhattacharya_bhoopat_mr@hessel.info","gender":"Male","status":"Active","created_at":"2021-04-21T03:50:04.441+05:30","updated_at":"2021-04-21T03:50:04.441+05:30"},{"id":15,"name":"Vyctor Hugo","email":"vyctorhugoc@gmail.com.br","gender":"Male","status":"Active","created_at":"2021-04-21T03:50:04.448+05:30","updated_at":"2021-04-21T08:34:52.438+05:30"},{"id":25,"name":"Daevi Marar","email":"marar_daevi@dietrich-kulas.info","gender":"Female","status":"Active","created_at":"2021-04-21T03:50:04.592+05:30","updated_at":"2021-04-21T03:50:04.592+05:30"},{"id":26,"name":"Washington Luis Cabral da Silva","email":"wluissilva@live.com","gender":"Male","status":"Active","created_at":"2021-04-21T03:50:04.614+05:30","updated_at":"2021-04-21T08:38:16.097+05:30"},{"id":27,"name":"Chitramala Khan CPA","email":"khan_cpa_chitramala@braun.io","gender":"Male","status":"Inactive","created_at":"2021-04-21T03:50:04.622+05:30","updated_at":"2021-04-21T03:50:04.622+05:30"},{"id":28,"name":"Lakshmi Tagore JD","email":"lakshmi_jd_tagore@leuschke.biz","gender":"Female","status":"Inactive","created_at":"2021-04-21T03:50:04.639+05:30","updated_at":"2021-04-21T03:50:04.639+05:30"},{"id":29,"name":"Ganak Namboothiri","email":"ganak_namboothiri@swift.net","gender":"Female","status":"Active","created_at":"2021-04-21T03:50:04.663+05:30","updated_at":"2021-04-21T03:50:04.663+05:30"},{"id":30,"name":"Damayanti Sethi","email":"sethi_damayanti@smith.biz","gender":"Male","status":"Inactive","created_at":"2021-04-21T03:50:04.671+05:30","updated_at":"2021-04-21T03:50:04.671+05:30"},{"id":31,"name":"Ayushmati Kocchar","email":"kocchar_ayushmati@kuhic.info","gender":"Female","status":"Active","created_at":"2021-04-21T03:50:04.691+05:30","updated_at":"2021-04-21T03:50:04.691+05:30"},{"id":32,"name":"The Hon. Girik Butt","email":"butt_hon_girik_the@kuhlman.name","gender":"Female","status":"Inactive","created_at":"2021-04-21T03:50:04.704+05:30","updated_at":"2021-04-21T03:50:04.704+05:30"},{"id":33,"name":"Devak Butt","email":"devak_butt@little-wuckert.biz","gender":"Male","status":"Active","created_at":"2021-04-21T03:50:04.719+05:30","updated_at":"2021-04-21T03:50:04.719+05:30"},{"id":34,"name":"Mukul Abbott","email":"abbott_mukul@skiles.co","gender":"Female","status":"Active","created_at":"2021-04-21T03:50:04.742+05:30","updated_at":"2021-04-21T03:50:04.742+05:30"},{"id":35,"name":"Daevika Adiga Sr.","email":"sr_adiga_daevika@stark.biz","gender":"Male","status":"Active","created_at":"2021-04-21T03:50:04.749+05:30","updated_at":"2021-04-21T03:50:04.749+05:30"},{"id":36,"name":"Mrs. Dayaananda Adiga","email":"dayaananda_adiga_mrs@stiedemann.io","gender":"Male","status":"Inactive","created_at":"2021-04-21T03:50:04.774+05:30","updated_at":"2021-04-21T03:50:04.774+05:30"},{"id":37,"name":"Gov. Akshata Verma","email":"gov_verma_akshata@smith-dickinson.name","gender":"Female","status":"Active","created_at":"2021-04-21T03:50:04.785+05:30","updated_at":"2021-04-21T03:50:04.785+05:30"},{"id":38,"name":"Kamalesh Khan","email":"kamalesh_khan@roberts-moore.co","gender":"Male","status":"Inactive","created_at":"2021-04-21T03:50:04.802+05:30","updated_at":"2021-04-21T03:50:04.802+05:30"},{"id":39,"name":"Dinakar Agarwal","email":"dinakar_agarwal@nicolas.io","gender":"Female","status":"Active","created_at":"2021-04-21T03:50:04.828+05:30","updated_at":"2021-04-21T03:50:04.828+05:30"},{"id":40,"name":"Johnathan Powlowski","email":"Elinor.OHara51@gmail.com","gender":"Male","status":"Active","created_at":"2021-04-21T03:50:04.842+05:30","updated_at":"2021-04-21T08:38:57.525+05:30"},{"id":41,"name":"Gov. Chandranath Nehru","email":"gov_nehru_chandranath@kiehn.biz","gender":"Female","status":"Active","created_at":"2021-04-21T03:50:04.866+05:30","updated_at":"2021-04-21T03:50:04.866+05:30"}]}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="6">
+                            <div class="step-ref passed">6</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+           
+  
+    </body>
+    
+</html>
